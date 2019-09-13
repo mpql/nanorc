@@ -36,6 +36,7 @@ Fell free to add your official package manager.
 
 | System     | Command                                  |
 | ---------- | ---------------------------------------- |
+| Arch Linux | `pacman -S nano-syntax-highlighting`     |
 | Arch Linux | `aurman -Ss nano-syntax-highlight`       |
 |            | `aurman -S nano-syntax-highlighting-git` |
 
