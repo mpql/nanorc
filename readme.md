@@ -77,7 +77,7 @@ Simply run:
 
 ### 3. One by one
 
-Add your preferable languages one by onento the file. For example:
+Add your preferable languages one by one into the file. For example:
 
 ```
 ## C/C++
