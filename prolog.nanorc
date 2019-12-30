@@ -4,7 +4,7 @@ syntax "prolog" "\.pl$"
 comment "%"
 
 # Reset everything
-color normal ".*"
+color white ".*"
 
 # Integers and floats
 color yellow "(^| |=)[0-9]+\.?[0-9]*"
