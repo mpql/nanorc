@@ -25,12 +25,16 @@ icolor brightcyan "\<(class|enum|function|using|assembly|command|module|namespac
 icolor green "\<(string|char|byte|int|long|bool|decimal|single|double|DateTime|xml|array|hashtable|void)\>"
 
 ## Comments
+color cyan "#.*$"
 color cyan start="<#" end="#>"
-color cyan "(^|[[:space:]])#[^>].*$"
 
 ## Quoted text
 color brightyellow "\"[^\"]*\""
 color brightyellow "'[^']*'"
+
+## Text between %'s and @'s
+icolor brightmagenta "\%[^\%]*\%"
+
 ## Here strings
 icolor brightmagenta start="@\"" end="\"@"
 icolor brightmagenta start="@'" end="'@"
