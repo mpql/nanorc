@@ -7,13 +7,16 @@ if [ ! "$(command -v unzip)" ]; then
 fi
 
 _fetch_sources(){
-  wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
-  mkdir -p ~/.nano/
+  wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/v2.9.zip
+  if [ ! -d ~/.nano/ ]
+  then
+    mkdir ~/.nano/
+  fi
 
   cd ~/.nano/ || exit
   unzip -o "/tmp/nanorc.zip"
-  mv nanorc-master/* ./
-  rm -rf nanorc-master
+  mv nano-syntax-highlighting-master/* ./
+  rm -rf nano-syntax-highlighting-master
   rm /tmp/nanorc.zip
 }
 
@@ -45,7 +48,7 @@ case "$1" in
 esac
 
 _fetch_sources;
-if [ $UPDATE_LITE ];
+if [ "$UPDATE_LITE" ];
 then
   _update_nanorc_lite
 else
